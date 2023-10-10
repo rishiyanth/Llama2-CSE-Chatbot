@@ -5,6 +5,8 @@ from langchain.vectorstores import FAISS
 from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
 import chainlit as cl
+from typing import Dict, Optional
+
 
 DB_FAISS_PATH = 'vectorstore/db_faiss'
 
@@ -17,6 +19,19 @@ Question: {question}
 Only return the helpful answer below and nothing else.
 Helpful answer:
 """
+
+@cl.oauth_callback
+def oauth_callback(
+  provider_id: str,
+  token: str,
+  raw_user_data: Dict[str, str],
+  default_app_user: cl.AppUser,
+) -> Optional[cl.AppUser]:
+  if provider_id == "google":
+    if raw_user_data["hd"] == "student.tce.edu":
+      return default_app_user
+  return None
+
 
 def set_custom_prompt():
     """
@@ -70,7 +85,7 @@ async def start():
     chain = qa_bot()
     msg = cl.Message(content="Starting the bot...")
     await msg.send()
-    msg.content = "Hi, Welcome to Medical Bot. What is your query?"
+    msg.content = "Hi, Welcome to CSE bot. What is your query?"
     await msg.update()
 
     cl.user_session.set("chain", chain)

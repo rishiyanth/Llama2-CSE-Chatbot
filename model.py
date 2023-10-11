@@ -100,11 +100,13 @@ async def main(message):
     res = await chain.acall(message, callbacks=[cb])
     answer = res["result"]
     sources = res["source_documents"]
+    references = ""
 
     if sources:
-        answer += f"\nSources:" + str(sources)
+        references += f"\nSources:" + str(sources)
     else:
-        answer += "\nNo sources found"
+        references += "\nNo sources found"
 
     await cl.Message(content=answer).send()
+    await cl.Message(content=references).send()
 

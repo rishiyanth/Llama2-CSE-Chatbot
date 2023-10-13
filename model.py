@@ -6,6 +6,7 @@ from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
 import chainlit as cl
 from typing import Dict, Optional
+import re
 
 
 DB_FAISS_PATH = 'vectorstore/db_faiss'
@@ -103,10 +104,23 @@ async def main(message):
     references = ""
 
     if sources:
-        references += f"\nSources:" + str(sources)
+        # references += f"\nSources:" + str(sources)
+        
+        # Use regex to extract the metadata objects
+        metadata_pattern = re.compile(r"metadata=\{(.*?)\}", re.DOTALL)
+        metadata_matches = metadata_pattern.findall(str(sources))
+
+        # Process and print the extracted metadata objects
+        for metadata_match in metadata_matches:
+            # Add "}" to close the dictionary and extract the "page" property
+            metadata_match = '{' + metadata_match + '}'
+            metadata_dict = eval(metadata_match)  # Convert to a dictionary
+            reference = f"Source : {metadata_dict['source']}(Page : {metadata_dict['page']})\n"
+            references += reference
+            
     else:
         references += "\nNo sources found"
 
-    await cl.Message(content=answer).send()
+    # await cl.Message(content=answer).send()
     await cl.Message(content=references).send()
 

@@ -20,7 +20,7 @@ prompt_playground = true
 
 [UI]
 # Name of the app and chatbot.
-name = "Chatbot"
+name = "Polaris"
 
 # Description of the app and chatbot. This is used for HTML tags.
 # description = ""
@@ -35,11 +35,11 @@ default_expand_messages = false
 hide_cot = false
 
 # Link to your github repo. This will add a github button in the UI's header.
-# github = ""
+# github = "https://github.com/rishiyanth/Llama2-CSE-Chatbot"
 
 # Specify a CSS file that can be used to customize the user interface.
 # The CSS file can be served from the public directory or via an external link.
-# custom_css = "/public/test.css"
+custom_css = "/public/test.css"
 
 # If the app is served behind a reverse proxy (like cloud run) we need to know the base url for oauth
 # base_url = "https://mydomain.com"

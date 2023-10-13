@@ -1,11 +1,19 @@
-# Welcome to Llama2 CSE-Bot! 🚀🤖
+# Welcome to Polaris! 🤖
 
-Hi there, 👋 We're excited to have you on board. This is a powerful bot designed to help you ask queries related to your data/knowledge.
+_One step closer to a better learning experience._
 
-## Useful Links 🔗
+Hi there, I'm here to answer all your queries related to your subjects.
 
-- **Data:** This is the data which has been used as a knowledge base. [Knowledge Base](https://docs.chainlit.io) 📚
-- **Join AI Anytime Community:** Join our friendly [WhatsApp Group](https://discord.gg/ZThrUxbAYw) to ask questions, share your projects, and connect with other developers! 💬
+### Useful Links 🔗
+
+- **Data:** This is the data which has been used as a knowledge base. [Knowledge Base](https://docs.google.com/document/d/1Uh405YY1_evXJ94UXjSF_Q6XLoho9H4ZZbZaUv-xaP4/edit?usp=sharing) 📚
+
+### My Creators 👽
+
+- Rishiyanth
+- Jagajeet Puttaa
+- Krishna Sameer
+
 
 Happy chatting! 💻😊
 

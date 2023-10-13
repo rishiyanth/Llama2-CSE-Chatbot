@@ -1,0 +1,55 @@
+/* body{
+    background-color: #556399 !important;
+} */
+
+/* .MuiToolbar-root{
+    background-color: #2b324d !important;
+}
+
+.MuiToolbar-gutters{
+    background-color: #2b324d !important;
+}
+
+.MuiToolbar-regular{
+    background-color: #2b324d !important;
+} */
+
+.css-mdd2xo{
+    /* background-color: #2b324d !important; */
+}
+
+.css-3y7kjl{
+    /* background-color: aquamarine !important;
+     */
+    /* background-color: #58427c !important;
+    background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%) !important; */
+}
+
+.css-lxws8o{
+    /* background-color: #58427c !important;
+    background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%) !important; */
+}
+
+.css-7kdxxp{
+    /* background-color: #58427c !important;
+    background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%) !important; */
+    /* border-color: linear-gradient(to top, #a8edea 0%, #fed6e3 100%) !important;
+     */
+     border-top: 2px solid;
+     border-bottom: 2px solid;
+     border-image-slice: 1;
+     border-width: 2px;
+     border-image-source: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+}
+
+.css-1s3oi5q{
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.css-gshcy7{
+    color: #9191f9 !important;
+}
